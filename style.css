@@ -119,9 +119,14 @@ input[type="radio"] {
 #results button:first-of-type { background: #fff7e6; } /* edit (first button) */
 #results button[style*="red"], #results button[onclick*="remove"] { background: #ff6b6b; color: #fff; box-shadow: 0 8px 18px rgba(255,107,107,0.18); }
 
-/* responsive tweaks */
-@media (max-width: 640px) {
-  table, #results { width: 96%; }
-  thead th h1 { font-size: 18px; }
-  #submit { width: 100%; }
-}
+  @media screen and (max-width: 768px) {
+        /* Styles for screens with a maximum width of 768px (e.g., mobile phones, small tablets) */
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+        /* Styles for screens between 769px and 1200px (e.g., tablets, laptops) */
+    }
+
+    @media screen and (min-width: 1201px) {
+        /* Styles for screens with a minimum width of 1201px (e.g., larger laptops, desktops) */
+    }
