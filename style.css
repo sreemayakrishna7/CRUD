@@ -119,14 +119,142 @@ input[type="radio"] {
 #results button:first-of-type { background: #fff7e6; } /* edit (first button) */
 #results button[style*="red"], #results button[onclick*="remove"] { background: #ff6b6b; color: #fff; box-shadow: 0 8px 18px rgba(255,107,107,0.18); }
 
-  @media screen and (max-width: 768px) {
-        /* Styles for screens with a maximum width of 768px (e.g., mobile phones, small tablets) */
-    }
+/* ...existing code... */
 
-    @media screen and (min-width: 769px) and (max-width: 1200px) {
-        /* Styles for screens between 769px and 1200px (e.g., tablets, laptops) */
-    }
+/* MOBILE / ANDROID (max 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
 
-    @media screen and (min-width: 1201px) {
-        /* Styles for screens with a minimum width of 1201px (e.g., larger laptops, desktops) */
-    }
+  table {
+    width: 95%;
+    margin: 8px auto;
+  }
+
+  thead th {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+
+  td, th {
+    padding: 8px 6px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  #submit {
+    width: 90%;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  #results {
+    width: 95%;
+    margin: 12px auto;
+  }
+
+  #results button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* TABLET (601px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    padding: 20px 10px;
+  }
+
+  table {
+    width: 92%;
+    margin: 12px auto;
+  }
+
+  thead th {
+    font-size: 18px;
+    padding: 14px 10px;
+  }
+
+  td, th {
+    padding: 10px 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+
+  #submit {
+    width: 300px;
+    padding: 11px 16px;
+    font-size: 15px;
+  }
+
+  #results {
+    width: 92%;
+  }
+
+  #results button {
+    padding: 5px 9px;
+    font-size: 13px;
+  }
+}
+
+/* LAPTOP / DESKTOP (1025px and above) */
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+    padding: 28px 12px;
+  }
+
+  table {
+    width: 90%;
+    max-width: 920px;
+    margin: 12px auto;
+  }
+
+  thead th {
+    font-size: 20px;
+    padding: 18px 12px;
+  }
+
+  td, th {
+    padding: 12px 14px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  select {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  #submit {
+    width: min(320px, 100%);
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+
+  #results {
+    width: 90%;
+    max-width: 920px;
+  }
+
+  #results button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
